@@ -23,3 +23,28 @@ Lembre-se que na hora da avaliaÃ§Ã£o olharemos para:
 - organizaÃ§Ã£o de cÃ³digo;
 - desempenho;
 - manutenabilidade.
+
+# Alessnadro Vieira Grammelsbacher
+
+O projeto foi desenvolvido em Java, foi criado uma API Rest para realizar a busca no JSON e filtrar / ordenar a lista de vagas.
+
+- <b> Utilização: </b>
+
+Para fazer a utilização da API, realize o deploy do WAR, contido em /compilado em um Apache TOMCAT 8. <<Colocar URL para passo a passo>>
+Inicie o serviço do TOMCAT e a utilização da API se dará através da URL: http://localhost:8080/backend-test/api/vagas, para um exemplo de front-end, utilize a URL: http://localhost:8080/backend-test, o front-end foi utilizado um template Bootstrap chamado ADMIN LTE, como o objetivo era a visualização do BackEnd, utilizei um template pronto apenas para mostrar como pode ser utilizada a API.
+
+ - <b> API </b>
+ 
+A API Rest pode ser utilizada através do endereço: 
+São esperados as seguintes Queries Strings: filtro, cidade e salario, detralhadas abaixo
+
+- <i>Filtro:</i> Texto com as informações que irão filtrar a lista nos campos Descrição e Título das vagas
+
+- <i>Cidade:</i> Texto que será aplicado na lista de cidades
+
+- <i>Salário: </i> Expera o texto: DESC ou CRES para ordenação por salário: Desc para Decrescente ou CRES para Crescente.
+
+- <b> Arquivo JSON </b>
+
+O Arquivo JSON deverá ficar na pasta: C:/Catho/json/vagas.json, para alterar o caminho ou arquivo, realize a alteração no arquivo Global.java
+
