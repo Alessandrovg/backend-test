@@ -15,11 +15,6 @@ public class TestesApi {
     }
 	
 	@Test
-	public void test() {
-		fail("Not yet implemented");
-	}
-	
-	@Test
 	public void testeRestAPI()
 	{
 		given()
@@ -41,4 +36,94 @@ public class TestesApi {
 			.assertThat()
 				.body(matchesJsonSchemaInClasspath("com/catho/testes/json/vagas.json"));
 	}
+	
+	@Test
+	public void testeFiltroTituloDescricao()
+	{
+		given()
+		.when()
+			.get("/vagas?filtro=TI")
+		.then()
+			.statusCode(200)
+			.assertThat()
+				.body(matchesJsonSchemaInClasspath("com/catho/testes/json/vagasTI.json"));
+	}
+	
+
+	@Test
+	public void testeFiltroCidade()
+	{
+		given()
+		.when()
+			.get("/vagas?cidade=florian")
+		.then()
+			.statusCode(200)
+			.assertThat()
+				.body(matchesJsonSchemaInClasspath("com/catho/testes/json/vagasFlorian.json"));
+	}
+	
+	@Test
+	public void testeFiltroCrescente()
+	{
+		given()
+		.when()
+			.get("/vagas?salario=CRES")
+		.then()
+			.statusCode(200)
+			.assertThat()
+				.body(matchesJsonSchemaInClasspath("com/catho/testes/json/vagasCRES.json"));
+	}
+	
+	@Test
+	public void testeFiltroDecrescente()
+	{
+		given()
+		.when()
+			.get("/vagas?salario=DESC")
+		.then()
+			.statusCode(200)
+			.assertThat()
+				.body(matchesJsonSchemaInClasspath("com/catho/testes/json/vagasDESC.json"));
+	}
+	
+	@Test
+	public void testeFiltroTituloDescricaoCidade()
+	{
+		given()
+		.when()
+			.get("/vagas?filtro=TI&cidade=florian")
+		.then()
+			.statusCode(200)
+			.assertThat()
+				.body(matchesJsonSchemaInClasspath("com/catho/testes/json/vagasTiFlorian.json"));
+	}
+	
+	@Test
+	public void testeFiltroTituloDescricaoCidadeCrescente()
+	{
+		given()
+		.when()
+			.get("/vagas?filtro=TI&cidade=florian&salario=CRES")
+		.then()
+			.statusCode(200)
+			.assertThat()
+				.body(matchesJsonSchemaInClasspath("com/catho/testes/json/vagasTiFlorianCRES.json"));
+	}
+	
+	@Test
+	public void testeFiltroTituloDescricaoCidadeDecrescente()
+	{
+		given()
+		.when()
+			.get("/vagas?filtro=TI&cidade=florian&salario=DESC")
+		.then()
+			.statusCode(200)
+			.assertThat()
+				.body(matchesJsonSchemaInClasspath("com/catho/testes/json/vagasTiFlorianDESC.json"));
+	}
+	
+	
+	
+	
+	
 }
