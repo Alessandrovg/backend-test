@@ -48,3 +48,14 @@ São esperados as seguintes Queries Strings: filtro, cidade e salario, detralhada
 
 O Arquivo JSON deverá ficar na pasta: C:/Catho/json/vagas.json, para alterar o caminho ou arquivo, realize a alteração no arquivo Global.java
 
+#Lista de Dependências
+
+guava: Biblioteca para auxiliar no filtro das listas;
+gson: Biblioteca para auxiliar na utilização do JSON
+jersey-bundle: Biblioteca para criação do servidor REST
+jackson-databind: Biblioteca utilizada para mapemento entre objeto JSON e Java
+
+rest-assured: Biblioteca do framework rest-assured;
+json-path: Biblioteca responsável por ler as respostas das mensagens retornadas pela API;
+json-schema-validator: Biblioteca responsável por validar se a estrutura da resposta está correta;
+junit: Biblioteca que auxilia na escrita de testes automatizados.

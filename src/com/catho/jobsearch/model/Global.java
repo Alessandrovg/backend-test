@@ -6,8 +6,9 @@ package com.catho.jobsearch.model;
  *
  */
 public enum Global {
-		   JSONPath("C:/Catho/json/vagas.json");
-
+		   JSONPath("C:/Catho/json/vagas.json")
+		   , ApiWorkingMessage("API de Busca de Vagas iniciado com sucesso!");
+		   
 		   private final String value;
 
 		   private Global(String value) {
@@ -17,4 +18,6 @@ public enum Global {
 		   public String getValue() {
 		     return value;
 		   }
+		   
+		   
 }

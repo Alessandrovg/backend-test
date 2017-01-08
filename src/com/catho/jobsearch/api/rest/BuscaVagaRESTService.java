@@ -10,6 +10,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import com.catho.jobsearch.controle.VagasController;
+import com.catho.jobsearch.model.Global;
 
 /**
  * Classe Rest, para obtem as informações das vagas
@@ -26,9 +27,7 @@ public class BuscaVagaRESTService {
 	 * @return retorna String com mensagem sobre o servidor no ar
 	 */
 	public Response verifyRESTService(InputStream incomingData) {
-		String result = "API de Busca de Vagas iniciado com sucesso!";
- 
-		return Response.status(200).entity(result).build();
+		return Response.status(200).entity(Global.ApiWorkingMessage.getValue()).build();
 	}
 	
 	@GET

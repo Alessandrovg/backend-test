@@ -9,8 +9,6 @@ import java.util.List;
 
 import javax.naming.NamingException;
 
-import org.json.JSONException;
-
 import com.catho.jobsearch.api.helper.Helper;
 import com.catho.jobsearch.model.Global;
 import com.catho.jobsearch.model.Vagas;
@@ -61,7 +59,7 @@ public class VagasController {
 	 * @return retorna uma String em JSON, com a lista filtrada e ordenada
 	 * @throws JSONException
 	 */
-	public String filtrarVagasPorTexto(String filtroTexto, String filtroCidade, String ordenacao) throws JSONException
+	public String filtrarVagasPorTexto(String filtroTexto, String filtroCidade, String ordenacao) 
 	{
 		
 		// Crinado filtro que será utilizando na lista.
