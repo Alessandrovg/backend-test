@@ -30,8 +30,15 @@ O projeto foi desenvolvido em Java, foi criado uma API Rest para realizar a busc
 
 - <b> Utilização: </b>
 
-Para fazer a utilização da API, realize o deploy do WAR, contido em /compilado em um Apache TOMCAT 8. <<Colocar URL para passo a passo>>
+Para fazer a utilização da API, realize o deploy do WAR, contido em /compilado em um Apache TOMCAT 8.
 Inicie o serviço do TOMCAT e a utilização da API se dará através da URL: http://localhost:8080/backend-test/api/vagas, para um exemplo de front-end, utilize a URL: http://localhost:8080/backend-test, o front-end foi utilizado um template Bootstrap chamado ADMIN LTE, como o objetivo era a visualização do BackEnd, utilizei um template pronto apenas para mostrar como pode ser utilizada a API.
+
+- <b> Instalação: </b>
+
+<i>1.</i> Faça o Download ZIP do Apache Tomcat em: https://tomcat.apache.org/download-80.cgi
+<i>2.</i> Para realizar a instalação do Tomcat, basta descompactar o arquivo na pasta desejada (utilize o caminho sem espaços para facilitar a instalação)
+<i>3.</i> Feito isso, irá aparecer a estrutura de pastas do Tomcat, navegue até <<LocalDescompactado>>\apache-tomcat-8.0.33\webapps e coloque o arquivo WAR contido nesse projeto na pasta <<caminhoDoProjeto>>\backend-test\compilado\backend-test.war
+<i>4.</i> Inicie o Serviço do Apache Tomcat rodando o script: apache-tomcat-8.0.33\bin\startup.bat
 
  - <b> API </b>
  
@@ -59,3 +66,7 @@ rest-assured: Biblioteca do framework rest-assured;
 json-path: Biblioteca responsável por ler as respostas das mensagens retornadas pela API;
 json-schema-validator: Biblioteca responsável por validar se a estrutura da resposta está correta;
 junit: Biblioteca que auxilia na escrita de testes automatizados.
+
+#Testes
+
+Os testes foram criados em jUnit, para realizar os testes, poderá abrir o projeto com o eclipse e rodar o teste unitario com jUnit.
